@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
 class Home extends Component {
@@ -29,6 +30,8 @@ class Home extends Component {
         ? (
             posts.map(post => {
                 return (
+                    <div>  
+                    <Navbar />
                     <div className="post card" key={post.id}>
                         <div className="card-content">
                             <Link to={'/game/'+post.id}>
@@ -36,6 +39,7 @@ class Home extends Component {
                             </Link>
                             <p>{post.body}</p>
                         </div>
+                    </div>
                     </div>
                 )
             })

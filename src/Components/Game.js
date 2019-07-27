@@ -14,7 +14,8 @@ class Game extends Component {
                 this.setState({
                     game: res
                 })
-                console.log(res);
+                console.log(this.state.game.data.winningTeamName);
+                console.log(res.data.winningTeamName);
             })
             .catch(err => {
 
@@ -22,14 +23,24 @@ class Game extends Component {
     }
 
     render(){
-        return(
-        <div className="container">
-
-        </div>
-        )
+        const dataIn = this.state.game ? true : false;
+        if(dataIn){
+            console.log(this.state.game.data.winningTeamName);
+            // console.log(this.state.game.data[0].winningTeamName);
+            return(
+            <div className="container">
+                <h1>{this.state.game.data.winningTeamName}</h1>
+            </div>
+            )
+        } else{
+            return(
+            <div className="container">
+                <h1>Loading</h1>
+            </div>
+            )
+        }
+        
     }
-
-
 }
 
 export default Game;

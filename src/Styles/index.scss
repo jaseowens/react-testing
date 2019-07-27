@@ -1,0 +1,171 @@
+@import './variables';
+
+body{
+  font-family: 'Quicksand', sans-serif !important;
+  margin: 0;
+}
+
+#login-background-wrapper{
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(360deg, $blue-green 0%, $ocean 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-container{
+  background-color: rgb(255, 255, 255);
+  height: 50%;
+  width: 25%;
+  border-radius: 20px;
+  @extend .box-shadow;
+  h1{
+    font-weight: 400;
+    font-size: 2.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: -webkit-linear-gradient(360deg, $blue-green, $ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  #login-form{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .form-shrink{
+    width: 80%;
+    transition: all 1s;
+  }
+  p{
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.button{
+  background-color: $orange;
+  color: white;
+  height: 36px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#btn-login{
+  width: 80%;
+}
+
+.d-flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  width: 100%;
+}
+
+.text-light{
+  color: rgb(255, 255, 255);
+}
+
+.text-dark{
+  color: rgb(42, 42, 42);
+}
+
+.bg-light{
+  // background-color: $test;
+}
+
+.bg-dark{
+  background-color: #06164D;
+}
+
+.px-3{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.pt-5{
+  padding-top: 3rem;
+}
+
+.m-auto{
+  margin: 0 auto;
+}
+
+.mb-1{
+  margin-bottom: 1rem;
+}
+.mb-3{
+  margin-bottom: 1.5rem;
+}
+
+.mt-3{
+  margin-top: 1.5rem;
+}
+
+.pos-rel{
+  position: relative;
+}
+.bg-white{
+  background-color: white;
+} 
+
+.bor-rad-3{
+  border-radius: 15px;
+}
+
+input{
+  height: 36px;
+  font-size: 1rem;
+  padding-left: 10px;
+  background-color: rgb(221, 221, 221);
+  border: none;
+  border-radius: 3px;    
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-green{
+  color: $blue-green;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  #login-container{
+    width: 75%;
+  }
+}
+
